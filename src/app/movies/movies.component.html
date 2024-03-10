@@ -1,0 +1,11 @@
+
+<div class="row">
+    
+   <div *ngFor="let movie of movieData" class="col-md-3 py-3">
+       <div [routerLink]="['/movieDetails',movie.id]" class=" movie-item">
+           <img [src]="imgPrefix+movie.poster_path" class="w-100 img-fluid">
+           <h4>{{movie.title}}{{movie.name}}</h4>
+           <div class="vote position-absolute p-2">{{movie.vote_average}}</div>
+       </div>
+   </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="row py-4">
+   
+   <div *ngFor="let tv of tvData" class="col-md-3 py-3">
+       <div class=" tv-item">
+           <img [src]="imgPrefix+ tv.poster_path" class="w-100 img-fluid">
+           <h4>{{tv.title}}{{tv.name}}</h4>
+           <div class="vote position-absolute p-2">{{tv.vote_average}}</div>
+       </div>
+   </div>
+</div>
+

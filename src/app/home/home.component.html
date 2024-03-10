@@ -1,0 +1,32 @@
+<div class="row">
+     <div class="col-md-4 ">
+         <div class="brdr w-25 my-3"> </div>
+         <h3>trending<br>movies<br>to watch now</h3>
+         <p class="secondColor">most watched movies by day</p>
+         <div class="brdr w-100 mt-3"></div>
+     </div>
+    <div *ngFor="let movie of movieData" class="col-md-2 py-3">
+        <div [routerLink]="['/movieDetails',movie.id]" class=" movie-item">
+            <img [src]="imgPrefix+movie.poster_path" class="w-100 img-fluid">
+            <h4>{{movie.title}}{{movie.name}}</h4>
+            <div class="vote position-absolute p-2">{{movie.vote_average}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="row py-4">
+    <div class="col-md-4 ">
+        <div class="brdr w-25 my-3"> </div>
+        <h3>trending<br>tv<br>to watch now</h3>
+        <p class="secondColor">most watched tvs by day</p>
+        <div class="brdr w-100 mt-3"></div>
+    </div>
+   <div *ngFor="let tv of tvData" class="col-md-2 py-3">
+       <div class=" tv-item">
+           <img [src]="imgPrefix+ tv.poster_path" class="w-100 img-fluid">
+           <h4>{{tv.title}}{{tv.name}}</h4>
+           <div class="vote position-absolute p-2">{{tv.vote_average}}</div>
+       </div>
+   </div>
+</div>
+
